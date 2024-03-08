@@ -1,17 +1,20 @@
 package com.project.hexagonal.application.core.domain;
 
-public class Addess {
-    public Addess() {
+public class Address {
+
+    public Address() {
     }
 
-    public Addess(String street, String city, String state) {
+    public Address(String street, String city, String state) {
         this.street = street;
         this.city = city;
         this.state = state;
     }
 
     private String street;
-    private  String city;
+
+    private String city;
+
     private String state;
 
     public String getStreet() {
