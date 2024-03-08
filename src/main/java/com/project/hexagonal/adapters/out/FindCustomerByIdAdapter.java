@@ -3,23 +3,25 @@ package com.project.hexagonal.adapters.out;
 import com.project.hexagonal.adapters.out.repository.CustomerRepository;
 import com.project.hexagonal.adapters.out.repository.mapper.CustomerEntityMapper;
 import com.project.hexagonal.application.core.domain.Customer;
-import com.project.hexagonal.application.ports.out.InsertCustomerOutputPort;
+import com.project.hexagonal.application.ports.out.FindCustomerByIdOutputPort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.Optional;
+
 @Component
-public class InsertCustomerAdapter  implements InsertCustomerOutputPort {
+public class FindCustomerByIdAdapter implements FindCustomerByIdOutputPort {
 
     @Autowired
     private CustomerRepository customerRepository;
+
 
     @Autowired
     private CustomerEntityMapper customerEntityMapper;
 
     @Override
-    public void insert(Customer customer) {
-        var customeEntity = customerEntityMapper.toCustomerEntity(customer);
-        customerRepository.save(customeEntity);
-
+    public Optional<Customer> find(String id) {
+        var customerEntity = customerRepository.findById(id);
+        return customerEntity.map(entity -> customerEntityMapper.toCustomer(entity));
     }
 }
