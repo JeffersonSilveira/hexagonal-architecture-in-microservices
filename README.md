@@ -18,3 +18,17 @@ Talvez ainda mais importante, as classes de domínio podem ser compartilhadas po
 Visualmente, a arquitetura é representada por meio de dois hexágonos concêntricos (veja figura). No hexágono interno, ficam as classes do domínio (ou classes de negócio, se você preferir). No hexágono externo, ficam os adaptadores. Por fim, as classes de interface com o usuário, classes de tecnologia ou de sistemas externos ficam fora desses dois hexágonos.<br/>
 <img align="right" src="https://github.com/JeffersonSilveira/hexagonal-architecture-in-microservices/blob/final-project/images/core.JPG">
 
+Apartir de agora vamos focar nesta estrutura mostrada na imagem abaixo, onde está definida nos seguinte fluxo.
+* API de cliente
+  Vamos busca o endereço do cliente através do cep na api de endereço.
+* API de Endereço
+  Não iremos criar API, vamos mocar, vamos utilizar wiremock para simular na aplicação.
+* API de validação de cpf
+* Mongo
+  Vamos salvar os registros
+* Kafka
+  Onde iremos enviar os dados do cliente
+  
+
+
+
