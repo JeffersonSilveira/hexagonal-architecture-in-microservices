@@ -15,5 +15,3 @@ A vantagem dessa divisão é desacoplar esses dois tipos de classes.<br/>
 Assim, as classes de domínio não conhecem as tecnologias – bancos de dados, interfaces com usuário e quaisquer outras bibliotecas – usadas pelo sistema. <br/>
 Consequentemente, mudanças de tecnologia podem ser feitas sem impactar as classes de domínio. <br/>
 Talvez ainda mais importante, as classes de domínio podem ser compartilhadas por mais de uma tecnologia. Por exemplo, um sistema pode ter diversas interfaces (Web, mobile, etc)  [saiba mais](https://engsoftmoderna.info/artigos/arquitetura-hexagonal.html).<br/>
-
-
