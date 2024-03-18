@@ -14,4 +14,7 @@ A vantagem dessa divisão é desacoplar esses dois tipos de classes.<br/>
 
 Assim, as classes de domínio não conhecem as tecnologias – bancos de dados, interfaces com usuário e quaisquer outras bibliotecas – usadas pelo sistema. <br/>
 Consequentemente, mudanças de tecnologia podem ser feitas sem impactar as classes de domínio. <br/>
-Talvez ainda mais importante, as classes de domínio podem ser compartilhadas por mais de uma tecnologia. Por exemplo, um sistema pode ter diversas interfaces (Web, mobile, etc)  [saiba mais](https://engsoftmoderna.info/artigos/arquitetura-hexagonal.html).<br/>
+Talvez ainda mais importante, as classes de domínio podem ser compartilhadas por mais de uma tecnologia. Por exemplo, um sistema pode ter diversas interfaces (Web, mobile, etc)  [saiba mais](https://engsoftmoderna.info/artigos/arquitetura-hexagonal.html).<br/><br/>
+Visualmente, a arquitetura é representada por meio de dois hexágonos concêntricos (veja figura). No hexágono interno, ficam as classes do domínio (ou classes de negócio, se você preferir). No hexágono externo, ficam os adaptadores. Por fim, as classes de interface com o usuário, classes de tecnologia ou de sistemas externos ficam fora desses dois hexágonos.<br/>
+<img align="right" src="https://github.com/JeffersonSilveira/hexagonal-architecture-in-microservices/blob/final-project/images/core.JPG">
+
