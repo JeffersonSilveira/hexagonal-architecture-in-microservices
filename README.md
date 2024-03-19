@@ -19,6 +19,8 @@ Visualmente, a arquitetura é representada por meio de dois hexágonos concêntr
 <img align="right" src="https://github.com/JeffersonSilveira/hexagonal-architecture-in-microservices/blob/final-project/images/core.JPG">
 
 Apartir de agora vamos focar nesta estrutura mostrada na imagem abaixo, onde está definida nos seguinte fluxo.
+<img align="right" src="https://github.com/JeffersonSilveira/hexagonal-architecture-in-microservices/blob/final-project/images/fluxo.JPG">
+
 * API de cliente
   Vamos busca o endereço do cliente através do cep na api de endereço.
 * API de Endereço
