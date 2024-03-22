@@ -6,7 +6,7 @@ import com.tngtech.archunit.lang.ArchRule;
 
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 
-@AnalyzeClasses(packages = "com.arantes.hexagonal")
+@AnalyzeClasses(packages = "com.project.hexagonal")
 public class NamingConventionTest {
 
     @ArchTest
