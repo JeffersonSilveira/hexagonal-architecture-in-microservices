@@ -100,6 +100,13 @@ Para utilizar os recursos desenvolvidos basta acessar o endereço http://locaslh
 
 <img  src="https://github.com/JeffersonSilveira/hexagonal-architecture-in-microservices/blob/final-project/images/insertCustomer.JPG"><br/>
 
+## ArchUnit
+[ArchUnit]( https://www.archunit.org/) é uma biblioteca gratuita, simples e extensível para verificar a arquitetura do seu código Java. <br/>
+Ou seja, o ArchUnit pode verificar dependências entre pacotes e classes, camadas e fatias, verificar dependências cíclicas e muito mais. <br/>
+Isso é feito analisando um determinado bytecode Java, importando todas as classes para uma estrutura de código Java.<br/>
+O foco principal do ArchUnit é testar automaticamente a arquitetura e as regras de codificação, usando qualquer estrutura de teste de unidade Java simples. <br/>
+Isso evita que criarem estruturas paralelas no projeto.
+
 
 
 
