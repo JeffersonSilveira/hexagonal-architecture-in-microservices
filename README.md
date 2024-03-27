@@ -26,8 +26,8 @@ Visualmente, a arquitetura é representada por meio de dois hexágonos concêntr
 * Docker (Virtualização)
 
 ## Arquitetura Hexagonal
-Como mencionado acima vamos tuilizar para este projeto a arquitetura hexagonal, ela é organizada neste formato (imagem abaixo)
-<img align="right" src="https://github.com/JeffersonSilveira/hexagonal-architecture-in-microservices/blob/final-project/images/formato.JPG"><br/>
+Como mencionado acima vamos tuilizar para este projeto a arquitetura hexagonal, ela é organizada neste formato (imagem abaixo)<br/><br/>
+<img  src="https://github.com/JeffersonSilveira/hexagonal-architecture-in-microservices/blob/final-project/images/formato.JPG"><br/>
 
 Apartir de agora vamos focar nesta estrutura mostrada na imagem abaixo, onde está definida nos seguinte fluxo.<br/><br/>
 <img align="right" src="https://github.com/JeffersonSilveira/hexagonal-architecture-in-microservices/blob/final-project/images/fluxo.JPG"><br/>
@@ -44,7 +44,62 @@ Apartir de agora vamos focar nesta estrutura mostrada na imagem abaixo, onde est
  > Vamos salvar os registros
 * Kafka
  > Onde iremos enviar os dados do cliente
-  
+
+ ## Recursos do Wiremock
+ Para simularmos uma api de serviço de endereço basta baixar o [wiremock](https://wiremock.org/), extraia no diretório do projeto e digite o seguinte comando no terminal<br/>
+> java -jar wiremock-standalone-3.4.2.jar --port 8082
+
+Ao realizar o comando acima, será gerado um diretório chamado mappings, onde serão criados dois arquivos que servirão de endereços para o nosso mock, address.json e address_2.json. <br/>
+**Arquivo: address.json**
+ ```{
+    "request": {
+        "method": "GET",
+        "url": "/addresses/38400000"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "jsonBody": {
+            "street": "Rua Hexagonal",
+            "city": "Uberlândia",
+            "state": "Minas Gerais"
+        }
+    }
+}
+```
+**Arquivo: address_2.json**
+
+``` {
+    "request": {
+        "method": "GET",
+        "url": "/addresses/38400001"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "jsonBody": {
+            "street": "Rua das Flores",
+            "city": "São Paulo",
+            "state": "São Paulo"
+        }
+    }
+}
+```
+Para testarmos o recurso basta abrir o Postman e digitar o seguinte url.
+> http://localhost:8082/addresses/38400000 ou
+> http://localhost:8082"/addresses/38400001 
+
+<br/>
+<img  src="https://github.com/JeffersonSilveira/hexagonal-architecture-in-microservices/blob/final-project/images/endereco.JPG"><br/>
+
+Para utilizar os recursos desenvolvidos basta acessar o endereço http://locaslhost:8081/api/customers via Postman, a imagem abaixo mostrar a criação de um customer.<br/>
+
+<img  src="https://github.com/JeffersonSilveira/hexagonal-architecture-in-microservices/blob/final-project/images/insertCustomer.JPG"><br/>
+
 
 
 
