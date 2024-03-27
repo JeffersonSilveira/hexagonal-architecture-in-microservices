@@ -18,8 +18,20 @@ Talvez ainda mais importante, as classes de domínio podem ser compartilhadas po
 Visualmente, a arquitetura é representada por meio de dois hexágonos concêntricos (veja figura). No hexágono interno, ficam as classes do domínio (ou classes de negócio, se você preferir). No hexágono externo, ficam os adaptadores. Por fim, as classes de interface com o usuário, classes de tecnologia ou de sistemas externos ficam fora desses dois hexágonos.<br/><br/>
 <img align="right" src="https://github.com/JeffersonSilveira/hexagonal-architecture-in-microservices/blob/final-project/images/core.JPG"><br/>
 
+## Recurso que utilizaremos para esse projeto<br/>
+* Java
+* Spring Boot (Framework)
+* MongoDb (Banco de dados)
+* Kafka (Mensageria)
+* Docker (Virtualização)
+
+## Arquitetura Hexagonal
+Como mencionado acima vamos tuilizar para este projeto a arquitetura hexagonal, ela é organizada neste formato (imagem abaixo)
+<img align="right" src="https://github.com/JeffersonSilveira/hexagonal-architecture-in-microservices/blob/final-project/images/formato.JPG"><br/>
+
 Apartir de agora vamos focar nesta estrutura mostrada na imagem abaixo, onde está definida nos seguinte fluxo.<br/><br/>
 <img align="right" src="https://github.com/JeffersonSilveira/hexagonal-architecture-in-microservices/blob/final-project/images/fluxo.JPG"><br/>
+
 
 ## Breve descrição do fluxo
 * API de cliente
